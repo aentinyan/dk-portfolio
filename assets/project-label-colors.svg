@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Map #222222 to the state color, keeping white and alpha fixed. -->
+  <filter id="hover" color-interpolation-filters="sRGB">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.995475" intercept="0.004525"/>
+      <feFuncG type="linear" slope="0.805430" intercept="0.194570"/>
+      <feFuncB type="linear" slope="0.221719" intercept="0.778281"/>
+    </feComponentTransfer>
+  </filter>
+  <filter id="active" color-interpolation-filters="sRGB">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="1.063348" intercept="-0.063348"/>
+      <feFuncG type="linear" slope="0.959276" intercept="0.040724"/>
+      <feFuncB type="linear" slope="0.574661" intercept="0.425339"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
