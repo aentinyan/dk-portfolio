@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио Карины, графического дизайнера. Айдентика, иллюстрация, упаковка и цифровые интерфейсы.">
+  <meta name="theme-color" content="#fdfdfd">
+  <title>Портфолио DK</title>
+  <link rel="icon" type="image/png" sizes="61x61" href="./assets/project-index/arrow.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./portfolio.js"></script>
+</head>
+<body id="top">
+  <header class="site-header layout">
+    <span class="monogram" aria-label="DK">DK</span>
+    <nav class="site-nav" aria-label="Навигация по главной">
+      <a class="brackets" href="#about">обо&nbsp;мне</a>
+      <a class="brackets" href="#projects">проекты</a>
+      <a class="brackets" href="#contacts">контакты</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="hero" aria-labelledby="page-title">
+      <img class="hero-art" src="./assets/hero-star.webp" width="1979" height="2100" alt="">
+      <p class="hero-caption" lang="en">graphic designer’s</p>
+      <h1 class="wordmark" id="page-title" lang="en">
+        <span class="visually-hidden">Portfolio</span>
+        <img class="wordmark-image" src="./assets/portfolio.webp" width="2600" height="1271" alt="" fetchpriority="high">
+        <canvas aria-hidden="true"></canvas>
+      </h1>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 class="section-title brackets" id="about-title">обо&nbsp;мне</h2>
+      <div class="about-grid">
+        <div class="credentials">
+          <section class="credential">
+            <img class="credential-icon" src="./assets/direction.webp" width="160" height="160" alt="">
+            <div>
+              <h3>направление</h3>
+              <p>айдентика / брендинг / гайдлайны,<br>упаковка / мерч,<br>графика / маскоты,<br>веб-дизайн / интерфейсы (UI/UX)</p>
+            </div>
+          </section>
+          <section class="credential">
+            <img class="credential-icon" src="./assets/skills.webp" width="160" height="151" alt="">
+            <div>
+              <h3>навыки</h3>
+              <p>арт-дирекшн / построение UI-китов, модульных сеток,<br>создание паттернов / персонажей,<br>допечатная подготовка,<br>работа с&nbsp;AI-технологиями</p>
+            </div>
+          </section>
+          <section class="credential">
+            <img class="credential-icon" src="./assets/education.webp" width="151" height="160" alt="">
+            <div>
+              <h3>где училась</h3>
+              <p>СПбГУПТД Промтехдизайн<br>Прикладная информатика в&nbsp;дизайне<br><span class="dates">2022–2027</span></p>
+              <p>Онлайн-курсы (Udemy)<br>Веб-разработка: HTML5, CSS3, адаптив<br><span class="dates">2022–2023</span></p>
+            </div>
+          </section>
+          <section class="credential">
+            <img class="credential-icon" src="./assets/software.webp" width="159" height="160" alt="">
+            <div>
+              <h3>софт и по</h3>
+              <ul role="list">
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe InDesign</li>
+                <li>Figma</li>
+                <li>Blender</li>
+                <li>Paint Tool SAI</li>
+                <li>AI-инструменты</li>
+              </ul>
+            </div>
+          </section>
+          <section class="credential">
+            <img class="credential-icon" src="./assets/experience.webp" width="160" height="153" alt="">
+            <div>
+              <h3>опыт работы</h3>
+              <p>частная практика и проектные задачи<br><span class="dates">2024 — н.в.</span></p>
+            </div>
+          </section>
+        </div>
+
+        <section class="profile" aria-labelledby="profile-title">
+          <h3 id="profile-title"><img class="hello" lang="en" src="./assets/hello.webp" width="320" height="118" alt="hello,">меня зовут карина</h3>
+          <div class="profile-copy">
+            <p>Я графический дизайнер. Помимо дизайна умею работать в&nbsp;наполнении диджитал пространства. Создаю цельные визуальные системы — от&nbsp;глубокой айдентики и упаковки до&nbsp;интерфейсов и дизайн-систем.</p>
+            <p>Не загоняю проекты в&nbsp;один шаблон: мне одинаково близки и тактильная культура, и дружелюбная графика с&nbsp;персонажами, и строгая эстетика технологичных продуктов. Главное — точная метафора, характер и продуманная структура.</p>
+          </div>
+          <figure class="profile-visual">
+            <img class="portrait" src="./assets/portrait.webp" width="840" height="621" alt="Портрет Карины">
+            <img class="portrait-mark" src="./assets/portrait-star.webp" width="556" height="560" alt="">
+          </figure>
+        </section>
+      </div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">
+        <a href="./projects/" class="projects-link">
+          <img class="projects-label" src="./assets/projects.webp" width="960" height="129" alt="проекты">
+        </a>
+      </h2>
+      <p>Айдентика, иллюстрация, упаковка и цифровые интерфейсы — пять проектов, в&nbsp;которых концепция, характер бренда и строгая модульная сетка работают как единая система. Избранные проекты за&nbsp;2023–2026 годы, собранные от&nbsp;концепции до&nbsp;носителей.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts" aria-labelledby="contacts-title">
+    <div class="footer-grid layout">
+      <h2 class="section-title footer-title brackets" id="contacts-title"><span>давайте<br>свяжемся</span></h2>
+      <section class="footer-contacts" aria-labelledby="contact-links-title">
+        <h3 id="contact-links-title">контакты</h3>
+        <address>
+          <a href="tel:+79959871813">телефон: +7 (995) 987-18-13</a>
+          <a href="mailto:adeuseph@gmail.com">почта: adeuseph@gmail.com</a>
+          <a href="https://t.me/adeuseph">telegram: @adeuseph</a>
+        </address>
+      </section>
+      <section class="footer-socials" aria-labelledby="socials-title">
+        <h3 id="socials-title">площадки</h3>
+        <ul role="list">
+          <li><a data-social="behance" href="https://www.behance.net/adeuseph">behance <span aria-hidden="true">→</span></a></li>
+          <li><a data-social="pinterest" href="https://pin.it/48J7CVBKO">pinterest <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </section>
+      <a class="monogram footer-monogram" href="#top" aria-label="DK, наверх">DK</a>
+      <p class="footer-invite">сделаем что-нибудь<br>осмысленное вместе?</p>
+      <a class="contact-button" href="mailto:adeuseph@gmail.com" data-contact-open><span>написать мне <span aria-hidden="true">→</span></span></a>
+    </div>
+  </footer>
+
+  <a class="back-to-top" href="#top" aria-label="Наверх" title="Наверх"></a>
+
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="dialog-title">
+    <form method="dialog" class="dialog-dismiss">
+      <button type="submit" aria-label="Закрыть форму" autofocus>×</button>
+    </form>
+    <h2 class="section-title brackets" id="dialog-title">напишите мне</h2>
+    <p>Оставьте почту или другой контакт, чтобы я могла ответить.</p>
+    <form class="contact-form">
+      <label>Имя <input type="text" name="name" autocomplete="name" maxlength="100"></label>
+      <label>Почта или другой контакт <input type="text" name="contact" required pattern=".*\S.*" maxlength="150" placeholder="Email, Telegram или телефон"></label>
+      <label>Сообщение <textarea name="message" rows="3" maxlength="1500"></textarea></label>
+      <button type="submit" class="form-submit brackets">открыть письмо</button>
+      <p class="form-note">Форма составит письмо для&nbsp;отправки через&nbsp;вашу почту.</p>
+    </form>
+  </dialog>
+</body>
+</html>

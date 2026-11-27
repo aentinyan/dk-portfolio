@@ -1,0 +1,50 @@
+.hemilink-case .case-cover {
+  aspect-ratio: 32 / 9;
+  background: #ededed;
+}
+
+.hemilink-band { background: #5052ff; }
+
+.hemilink-video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hemilink-interfaces .case-guide-scroll {
+  --guide-height: calc(var(--guide-cover-width) * 0.83);
+}
+
+.hemilink-interfaces .case-screen-track {
+  --screen-overhang-end: 0.157;
+  padding-block-start: calc(var(--guide-height) * 0.06);
+}
+
+.hemilink-laptop {
+  --frame-height: 1236;
+  --frame-screen-top: 57;
+  --frame-screen-height: 1022;
+}
+
+.hemilink-posters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--case-gutter);
+}
+
+@media (width > 760px) {
+  .hemilink-centered { grid-column: 4 / span 6; }
+  .hemilink-case .case-concept { grid-column: 4 / span 3; }
+  .hemilink-case .case-workflow { grid-column: 8 / span 3; }
+  .hemilink-posters { grid-column: 3 / span 8; }
+
+  .hemilink-interfaces .case-guide-scroll {
+    --guide-start: calc(var(--guide-side) + 2 * var(--guide-column) - 1.25 * var(--case-gutter));
+  }
+
+  .hemilink-prototype { padding-inline-start: calc(1.75 * var(--case-gutter)); }
+}
+
+@media (max-width: 760px) {
+  .hemilink-case .case-grid > :is(.hemilink-centered, .hemilink-posters) { grid-column: 1 / -1; }
+}

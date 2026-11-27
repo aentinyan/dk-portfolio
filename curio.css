@@ -1,0 +1,71 @@
+.curio-case .case-cover {
+  aspect-ratio: 32 / 9;
+  background: #444548;
+}
+
+.curio-display {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 24 / 11;
+}
+
+.curio-room {
+  position: absolute;
+  inset: 12.84% 0;
+  overflow: hidden;
+}
+
+/* Keep extra photo above and below the visible crop. */
+.curio-room img {
+  position: absolute;
+  inset: 50% auto auto 0;
+  width: 106%;
+  height: auto;
+  max-width: none;
+  transform: translateY(calc(-54% + var(--curio-room-offset, 0px)));
+}
+
+.curio-robot {
+  position: absolute;
+  inset: 0 auto auto 64.0625%;
+  width: 20.382%;
+  height: auto;
+}
+
+.curio-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #d6d7d7;
+  object-fit: contain;
+}
+
+.curio-guidelines .case-guide-scroll { --guide-height: calc(var(--guide-cover-width) * 1.53); }
+.curio-interfaces .case-guide-scroll { --guide-height: calc(var(--guide-cover-width) * 1.23); }
+
+.curio-phone-frame {
+  --frame-height: 807;
+  --frame-screen-top: 23;
+  --frame-screen-height: 760;
+}
+
+.curio-tablet-frame {
+  --frame-height: 797;
+  --frame-screen-top: 19;
+  --frame-screen-height: 759;
+}
+
+@media (width > 760px) {
+  .curio-case .case-year { grid-column: 7 / span 2; }
+  .curio-case .case-concept { grid-column: 4 / span 3; }
+  .curio-case .case-workflow { grid-column: 8 / span 3; }
+  .curio-poster { grid-column: 2 / span 4; width: 81%; }
+  .curio-poster-scene { grid-column: 6 / span 6; }
+  .curio-video { grid-column: 2 / span 10; }
+}
+
+@media (max-width: 760px) {
+  .curio-posters { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.32fr); }
+  .curio-case .case-grid > .curio-video { grid-column: 1 / -1; }
+}

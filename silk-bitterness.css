@@ -1,0 +1,57 @@
+.silk-case .case-cover {
+  aspect-ratio: 32 / 9;
+  background: #304b2d;
+}
+
+.silk-case .case-band { aspect-ratio: auto; }
+.silk-prints { row-gap: clamp(0.9rem, 3.3vw, 4rem); }
+
+.silk-print-mockup { width: 86%; }
+.silk-print-sheet { width: 63%; }
+
+.silk-guidelines .case-guide-scroll { --guide-height: calc(var(--guide-cover-width) * 1.05); }
+.silk-strip:is(.silk-phones, .silk-laptops) .case-guide-scroll {
+  --silk-laptop-screen-height: 689;
+  --silk-laptop-screen-left: 119;
+  --silk-laptop-display-height: calc(var(--guide-cover-width) * 0.8536);
+  --silk-laptop-screen-inset: calc(var(--silk-laptop-display-height) * var(--silk-laptop-screen-left) / var(--silk-laptop-screen-height));
+}
+
+.silk-phones .case-guide-scroll { --guide-height: calc(var(--guide-cover-width) * 1.23); }
+.silk-laptops .case-guide-scroll { --guide-height: var(--silk-laptop-display-height); }
+
+.silk-phones .case-guide-track { gap: calc(var(--case-gutter) * 2.6); }
+.silk-laptops .case-screen-track { --screen-overhang-end: 0.15; }
+
+.silk-phone-frame {
+  --frame-height: 1048;
+  --frame-screen-top: 18;
+  --frame-screen-height: 1013;
+  margin-inline-start: calc(-1 * var(--guide-height) * 25 / var(--frame-screen-height));
+}
+
+.silk-laptop-frame {
+  --frame-height: 814;
+  --frame-screen-top: 24;
+  --frame-screen-height: var(--silk-laptop-screen-height);
+  margin-inline-start: calc(-1 * var(--silk-laptop-screen-inset));
+}
+
+.silk-case .case-prototype { --case-prototype-arrow: url("./assets/silk-bitterness/arrow.png"); }
+
+@media (width > 760px) {
+  .silk-case .case-year { grid-column: 7 / span 2; }
+  .silk-column-3 { grid-column: 3 / span 4; }
+  .silk-column-7 { grid-column: 7 / span 4; }
+  .silk-menu-sheet { width: 59%; }
+}
+
+@media (max-width: 760px) {
+  .silk-strip:is(.silk-phones, .silk-laptops) .case-guide-scroll {
+    --guide-start: max(var(--guide-side), calc(0.25rem + var(--silk-laptop-screen-inset)));
+  }
+
+  .silk-print-mockup { width: 100%; }
+  .silk-print-sheet { width: 73%; }
+  .silk-menu-sheet { width: 69%; }
+}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UI-кит портфолио DK. Цвета, типографика, сетка и компоненты для десктопа и мобильных экранов.">
+  <meta name="theme-color" content="#fdfdfd">
+  <title>UI-кит — Портфолио DK</title>
+  <link rel="icon" type="image/png" sizes="61x61" href="../assets/project-index/arrow.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../cases.css">
+  <link rel="stylesheet" href="../projects.css">
+  <link rel="stylesheet" href="./style-guide.css">
+  <script type="module" src="./style-guide.js"></script>
+</head>
+<body id="top">
+  <header class="kit-header kit-shell">
+    <a href="../" class="monogram" aria-label="DK, главная портфолио">DK</a>
+    <nav aria-label="Содержание style guide">
+      <a class="brackets" href="#foundations">основы</a>
+      <a class="brackets" href="#components">компоненты</a>
+      <a class="brackets" href="#responsive">адаптив</a>
+    </nav>
+  </header>
+
+  <main class="kit-shell">
+    <header class="kit-hero">
+      <p class="kit-kicker">Портфолио DK <span aria-hidden="true">/</span> Style guide</p>
+      <h1 lang="en">UI KIT</h1>
+      <img class="kit-hero-art" src="../assets/portrait-star.webp" width="556" height="560" alt="">
+      <p class="kit-intro">Цвета, шрифты, сетка и компоненты портфолио для&nbsp;десктопа и телефона.</p>
+    </header>
+
+    <section class="kit-section" id="foundations" aria-labelledby="foundations-title">
+      <h2 class="section-title brackets" id="foundations-title">основы</h2>
+
+      <div class="kit-block">
+        <h3 class="case-subheading">палитра</h3>
+        <ul class="kit-palette" role="list">
+          <li><button type="button" class="kit-swatch" data-color="#FDFDFD" aria-label="Скопировать цвет фона #FDFDFD"><span class="kit-swatch-color" style="--swatch:var(--paper)"></span><span class="kit-swatch-name">Фон <code>#FDFDFD</code></span></button></li>
+          <li><button type="button" class="kit-swatch" data-color="#222222" aria-label="Скопировать цвет текста #222222"><span class="kit-swatch-color" style="--swatch:var(--ink)"></span><span class="kit-swatch-name">Текст <code>#222222</code></span></button></li>
+          <li><button type="button" class="kit-swatch" data-color="#646464" aria-label="Скопировать цвет дат #646464"><span class="kit-swatch-color" style="--swatch:#646464"></span><span class="kit-swatch-name">Даты <code>#646464</code></span></button></li>
+          <li><button type="button" class="kit-swatch" data-color="#F0F0F0" aria-label="Скопировать цвет текста футера #F0F0F0"><span class="kit-swatch-color" style="--swatch:#f0f0f0"></span><span class="kit-swatch-name">Текст футера <code>#F0F0F0</code></span></button></li>
+          <li><button type="button" class="kit-swatch" data-color="#234DCE" aria-label="Скопировать цвет наведения и фокуса #234DCE"><span class="kit-swatch-color" style="--swatch:var(--blue)"></span><span class="kit-swatch-name">Наведение <code>#234DCE</code></span></button></li>
+          <li><button type="button" class="kit-swatch" data-color="#142B80" aria-label="Скопировать цвет нажатия #142B80"><span class="kit-swatch-color" style="--swatch:var(--blue-pressed)"></span><span class="kit-swatch-name">Нажатие <code>#142B80</code></span></button></li>
+        </ul>
+        <p class="kit-copy-status" data-copy-status role="status">Нажми на образец, чтобы скопировать HEX.</p>
+      </div>
+
+      <div class="kit-block">
+        <h3 class="case-subheading">типографика</h3>
+        <div class="kit-type-grid">
+          <figure class="kit-type-card">
+            <p class="kit-type-sample kit-type-archivo" lang="en">DK</p>
+            <figcaption><strong lang="en">Archivo Black</strong><span>400 · монограмма и подпись на главной</span></figcaption>
+          </figure>
+          <figure class="kit-type-card">
+            <p class="kit-type-sample kit-type-handil brackets">проекты</p>
+            <figcaption><strong lang="en">Handil Pro</strong><span>500 · заголовки, навигация и кнопки</span></figcaption>
+          </figure>
+          <figure class="kit-type-card">
+            <p class="kit-type-sample kit-type-wix">Дизайн и интерфейсы</p>
+            <figcaption><strong lang="en">Wix Madefor Display</strong><span>500 · описания, списки и даты</span></figcaption>
+          </figure>
+        </div>
+        <table class="kit-type-table">
+          <thead><tr><th scope="col">Уровень</th><th scope="col">Десктоп</th><th scope="col">Телефон</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Заголовок секции</th><td>32–66 px</td><td>32–52 px</td></tr>
+            <tr><th scope="row">Подзаголовок</th><td>17–30 px</td><td>19,5 px</td></tr>
+            <tr><th scope="row">Основной текст</th><td>11–15 px</td><td>13 px, вводный 15 px</td></tr>
+          </tbody>
+        </table>
+        <p class="kit-note">Кириллица берётся из&nbsp;Wix Madefor Display, если в&nbsp;акцидентном шрифте нет нужных букв. Леттеринг Portfolio и Hello хранится в&nbsp;изображениях.</p>
+      </div>
+
+      <div class="kit-block">
+        <h3 class="case-subheading">сетка</h3>
+        <div class="kit-grid-samples">
+          <figure>
+            <div class="kit-column-diagram kit-column-desktop" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <figcaption><strong>12 колонок</strong><span>Десктопная сетка кейсов. Контейнер 89,6%, до&nbsp;1500 px. Межколонник 10,4–17,6 px.</span></figcaption>
+          </figure>
+          <figure>
+            <div class="kit-column-diagram kit-column-mobile" aria-hidden="true"><span></span><span></span></div>
+            <figcaption><strong>2 колонки</strong><span>Сетка кейсов на&nbsp;телефоне. Поля 20 px, до&nbsp;350 px — 14 px. Межколонник 13,6 px.</span></figcaption>
+          </figure>
+        </div>
+        <dl class="kit-breakpoints">
+          <div><dt>≤ 760 px</dt><dd>Кейсы переходят на&nbsp;две колонки. В&nbsp;каталоге вместо веера появляется сетка карточек.</dd></div>
+          <div><dt>≤ 680 px</dt><dd>Главная собирается в&nbsp;одну колонку, футер — в&nbsp;две.</dd></div>
+          <div><dt>≤ 520 px</dt><dd>Карточки каталога и&nbsp;блоки навыков идут друг под&nbsp;другом.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="kit-section" id="components" aria-labelledby="components-title">
+      <h2 class="section-title brackets" id="components-title">компоненты</h2>
+
+      <div class="kit-component-grid kit-block">
+        <article class="kit-panel">
+          <h3 class="case-subheading">ссылки и стрелки</h3>
+          <nav class="site-nav kit-sample-nav" aria-label="Образец навигации портфолио">
+            <a class="brackets" href="../#about">обо&nbsp;мне</a>
+            <a class="brackets" href="../#projects">проекты</a>
+            <a class="brackets" href="../#contacts">контакты</a>
+          </nav>
+          <ul class="kit-states kit-link-states" role="list">
+            <li class="kit-state"><img src="../assets/project-index/arrow.png" width="61" height="61" alt=""><span>Обычное</span></li>
+            <li class="kit-state kit-state-hover"><img src="../assets/project-index/arrow.png" width="61" height="61" alt=""><span>Наведение</span></li>
+            <li class="kit-state kit-state-active"><img src="../assets/project-index/arrow.png" width="61" height="61" alt=""><span>Нажатие</span></li>
+          </ul>
+          <p class="kit-note">Меняется цвет. Толщина стрелки и&nbsp;леттеринга сохраняется. Клавиатурный фокус отмечен синей рамкой 2 px.</p>
+        </article>
+
+        <article class="kit-panel kit-panel-dark">
+          <h3 class="case-subheading">кнопка связи</h3>
+          <ul class="kit-states kit-contact-states" role="list">
+            <li class="kit-state"><button class="contact-button kit-contact-trigger" type="button" data-kit-open-form aria-haspopup="dialog"><span>написать мне <span aria-hidden="true">→</span></span></button><span>Обычное</span></li>
+            <li class="kit-state kit-state-hover"><span class="contact-button">написать мне&nbsp; →</span><span>Наведение</span></li>
+            <li class="kit-state kit-state-active"><span class="contact-button">написать мне&nbsp; →</span><span>Нажатие</span></li>
+          </ul>
+          <p class="kit-note">Первая кнопка открывает пример формы. В&nbsp;ней есть обязательное поле контакта и&nbsp;проверка заполнения.</p>
+        </article>
+
+        <article class="kit-panel">
+          <h3 class="case-subheading">карточка проекта</h3>
+          <a class="project-link kit-project-card" href="../projects/three-capitals/">
+            <img class="kit-project-image" src="../assets/project-index/three-capitals.webp" width="1800" height="658" alt="" loading="lazy">
+            <div class="project-summary">
+              <p class="project-name">три столицы</p>
+              <p class="project-details"><span class="project-year">2023</span><span>айдентика / гайдлайн / мерч</span></p>
+            </div>
+            <span class="project-direction" aria-hidden="true"></span>
+          </a>
+        </article>
+
+        <article class="kit-panel">
+          <h3 class="case-subheading">иконки</h3>
+          <ul class="kit-icons" role="list">
+            <li><img src="../assets/direction.webp" width="160" height="160" alt="" loading="lazy"><span>Направление</span></li>
+            <li><img src="../assets/skills.webp" width="160" height="151" alt="" loading="lazy"><span>Навыки</span></li>
+            <li><img src="../assets/education.webp" width="151" height="160" alt="" loading="lazy"><span>Образование</span></li>
+            <li><img src="../assets/software.webp" width="159" height="160" alt="" loading="lazy"><span>Софт</span></li>
+            <li><img src="../assets/experience.webp" width="160" height="153" alt="" loading="lazy"><span>Опыт</span></li>
+            <li><img src="../assets/project-index/arrow.png" width="61" height="61" alt="" loading="lazy"><span>Переход</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="kit-section" id="responsive" aria-labelledby="responsive-title">
+      <h2 class="section-title brackets" id="responsive-title">адаптив</h2>
+      <div class="kit-view-controls">
+        <div class="kit-view-options" role="group" aria-label="Страница для сравнения">
+          <button type="button" data-preview="../" aria-pressed="true">Главная</button>
+          <button type="button" data-preview="../projects/" aria-pressed="false">Каталог</button>
+          <button type="button" data-preview="../projects/silk-bitterness/" aria-pressed="false">Кейс</button>
+        </div>
+        <a class="kit-preview-link brackets" data-open-preview href="../">открыть страницу <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="kit-note kit-preview-note">Внутри каждого окна можно прокручивать страницу.</p>
+      <div class="kit-previews">
+        <figure>
+          <figcaption><strong>Десктоп</strong><span>1440 × 900</span></figcaption>
+          <div class="kit-viewport kit-viewport-desktop">
+            <iframe src="../" title="Главная портфолио на десктопе" width="1440" height="900" loading="lazy"></iframe>
+          </div>
+        </figure>
+        <figure>
+          <figcaption><strong>Телефон</strong><span>390 × 844</span></figcaption>
+          <div class="kit-viewport kit-viewport-mobile">
+            <iframe src="../" title="Главная портфолио на телефоне" width="390" height="844" loading="lazy"></iframe>
+          </div>
+        </figure>
+      </div>
+      <dl class="kit-behaviors">
+        <div><dt>Главная</dt><dd>Металлический блик следует за&nbsp;курсором по&nbsp;леттерингу Portfolio. На&nbsp;сенсорном экране видна статичная версия.</dd></div>
+        <div><dt>Каталог</dt><dd>Карточка выдвигается на&nbsp;десктопе за&nbsp;260 мс. На&nbsp;телефоне карточки читаются сверху вниз.</dd></div>
+        <div><dt>Кейс</dt><dd>Гайдлайны и&nbsp;интерфейсы прокручиваются горизонтально. Видимые экраны выровнены внутри рамок устройств.</dd></div>
+      </dl>
+      <noscript><p class="kit-note">Сравнить страницы можно через&nbsp;ссылки в&nbsp;каталоге портфолио.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="kit-footer">
+    <div class="kit-shell">
+      <a href="../" class="monogram" aria-label="DK, главная портфолио">DK</a>
+      <a class="brackets" href="#top">наверх <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <dialog class="contact-dialog" id="kit-contact-example" aria-labelledby="kit-form-title">
+    <form method="dialog" class="dialog-dismiss">
+      <button type="submit" aria-label="Закрыть форму" autofocus>×</button>
+    </form>
+    <h2 class="section-title brackets" id="kit-form-title">напишите мне</h2>
+    <p>Пример формы связи.</p>
+    <form class="contact-form" data-kit-form>
+      <label>Имя <input type="text" name="name" autocomplete="off" maxlength="100"></label>
+      <label>Почта или другой контакт <input type="text" name="contact" required pattern=".*\S.*" maxlength="150" placeholder="Email, Telegram или телефон"></label>
+      <label>Сообщение <textarea name="message" rows="3" maxlength="1500"></textarea></label>
+      <button type="submit" class="form-submit brackets">проверить форму</button>
+      <p class="form-note" data-kit-form-status role="status">Пример проверяет заполнение прямо на&nbsp;странице.</p>
+    </form>
+  </dialog>
+</body>
+</html>

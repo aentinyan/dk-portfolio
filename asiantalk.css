@@ -1,0 +1,47 @@
+.asiantalk .case-cover {
+  background: #4155a8;
+}
+
+.asiantalk-mascot-row {
+  margin-block: calc(var(--case-row-gap) / 2);
+}
+
+@media (width > 760px) {
+  .asiantalk {
+    --case-row-gap: clamp(1.65rem, calc(100vw * 100 / 1920), 100px);
+  }
+
+  .asiantalk .case-year { grid-column: 7 / span 2; }
+
+  .asiantalk-poster {
+    grid-column: 3 / span 3;
+    width: 90%;
+  }
+
+  .asiantalk-poster-mockup { grid-column: 6 / span 5; }
+  .asiantalk-package { grid-column: 3 / span 3; }
+
+  .asiantalk-tape {
+    grid-column: 6 / span 5;
+    width: 91.5%;
+    justify-self: end;
+  }
+
+  .asiantalk-merch, .asiantalk-stickers { grid-column: 4 / span 6; }
+
+  .asiantalk-mascot {
+    grid-column: 3 / span 8;
+    width: 95%;
+    justify-self: center;
+  }
+
+  .asiantalk-social-first { grid-column: 3 / span 4; }
+  .asiantalk-social-second { grid-column: 7 / span 4; }
+}
+
+@media (max-width: 760px) {
+  .asiantalk :is(.case-cover, .case-band) { aspect-ratio: 32 / 9; }
+  .asiantalk-poster-row { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.32fr); }
+  .asiantalk-tape-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1.54fr); }
+  .asiantalk .case-grid > :is(.asiantalk-merch, .asiantalk-stickers, .asiantalk-mascot) { grid-column: 1 / -1; }
+}

@@ -1,0 +1,246 @@
+.case-page {
+  --case-gutter: clamp(0.65rem, 1.04vw, 1.1rem);
+  --case-row-gap: clamp(1.65rem, 5.2vw, 6.25rem);
+}
+
+.case-cover,
+.case-band {
+  aspect-ratio: 32 / 9;
+}
+
+.case-cover {
+  position: relative;
+  margin-top: max(2.75rem, calc(14vw - 74px));
+  background: #571f1b;
+}
+
+.case-cover img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-intro {
+  padding-block: clamp(3.75rem, 18.7vw, 22rem) clamp(2rem, 5.6vw, 6.75rem);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--case-gutter);
+}
+
+.case-meta {
+  margin-top: clamp(1.65rem, 5.2vw, 6.25rem);
+}
+
+.case-description { grid-column: 1 / span 3; }
+.case-software { grid-column: 5 / span 2; }
+.case-team { grid-column: 7 / span 2; }
+.case-year { grid-column: 9 / span 2; }
+
+.case-copy p + p { margin-top: 0.68em; }
+.case-subheading + .case-copy { margin-top: 0.62em; }
+
+.case-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--case-row-gap);
+}
+
+.case-band {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.case-media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-business-card {
+  grid-column: 3 / span 4;
+  /* Trim the dark line and its resampled edge from the exported mockup. */
+  aspect-ratio: 1600 / 1226;
+  object-fit: cover;
+  object-position: top;
+}
+
+.case-print {
+  grid-column: 8 / span 3;
+  width: 83%;
+}
+
+.case-print img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-vouchers { grid-column: 3 / span 8; }
+.case-concept { grid-column: 3 / span 3; }
+.case-workflow { grid-column: 7 / span 3; }
+.case-pair-left { grid-column: 2 / span 5; }
+.case-pair-right { grid-column: 7 / span 5; }
+.case-plate-large { grid-column: 3 / span 5; }
+.case-plate-small { grid-column: 8 / span 3; }
+
+.case-apparel .case-media {
+  aspect-ratio: 1398 / 1086;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.case-guideline {
+  min-width: 0;
+  container-type: inline-size;
+}
+
+.case-guide-scroll {
+  --guide-layout: min(89.6cqw, 1500px);
+  --guide-column: calc((var(--guide-layout) - 11 * var(--case-gutter)) / 12);
+  --guide-side: calc((100cqw - var(--guide-layout)) / 2);
+  --guide-start: calc(var(--guide-side) + var(--guide-column) + var(--case-gutter));
+  --guide-cover-width: calc(3 * var(--guide-column) + 2 * var(--case-gutter));
+  --guide-height: calc(var(--guide-cover-width) * 559 / 794);
+  padding-block-end: 0.65rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.case-guide-scroll:focus-visible { outline-offset: -2px; }
+
+.capitals-guidelines .case-guide-scroll { --guide-height: calc(var(--guide-cover-width) * 0.88); }
+
+.case-guide-track {
+  display: flex;
+  gap: var(--case-gutter);
+  width: max-content;
+  padding-inline-start: var(--guide-start);
+}
+
+.case-guide-track > li { flex: none; }
+
+.case-guide-track img {
+  display: block;
+  width: auto;
+  height: var(--guide-height);
+  max-width: none;
+}
+
+.case-screen-track {
+  align-items: start;
+  padding-block: calc(var(--guide-height) * 0.036)
+    calc(var(--guide-height) * var(--screen-overhang-end, 0.032));
+}
+
+/* Align the artwork inside each device with the unframed screens. */
+.case-screen-frame img {
+  height: calc(var(--guide-height) * var(--frame-height) / var(--frame-screen-height));
+  margin-block-start: calc(-1 * var(--guide-height) * var(--frame-screen-top) / var(--frame-screen-height));
+  margin-block-end: calc(var(--guide-height) * (var(--frame-screen-top) + var(--frame-screen-height) - var(--frame-height)) / var(--frame-screen-height));
+}
+
+.case-prototype {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font: 500 clamp(1rem, 1.94cqw, 1.85rem)/1.04 var(--display);
+}
+
+.case-prototype-arrow {
+  width: 1em;
+  aspect-ratio: 1;
+  background: currentColor;
+  mask: var(--case-prototype-arrow, url("./assets/project-index/arrow.png")) center / contain no-repeat;
+}
+
+@media (hover: hover) {
+  .case-prototype:hover { color: var(--blue); }
+}
+
+.case-prototype:active { color: var(--blue-pressed); }
+
+.case-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block: clamp(3rem, 13.8vw, 16.5rem) clamp(1.75rem, 5.2vw, 6.25rem);
+}
+
+.case-neighbor {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.55em 0.8em;
+  border: 2px solid currentColor;
+  font: 500 clamp(0.86rem, 1.2cqw, 1.1rem)/1.1 var(--display);
+}
+
+.case-neighbor:last-child { margin-inline-start: auto; }
+
+@media (hover: hover) {
+  .case-neighbor:hover { color: var(--blue); }
+}
+
+.case-neighbor:active { color: var(--blue-pressed); }
+
+@media (max-width: 760px) {
+  .case-page {
+    --case-gutter: 0.85rem;
+    --case-row-gap: clamp(1.5rem, 5.6vw, 2.7rem);
+  }
+
+  .case-cover {
+    margin-top: 1.5rem;
+    aspect-ratio: 2.4;
+  }
+
+  .case-intro { padding-block: 3.25rem 2.25rem; }
+
+  .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-grid > * { grid-column: auto; }
+  .case-grid > :is(.case-description, .case-vouchers, .case-concept, .case-workflow) { grid-column: 1 / -1; }
+
+  .case-meta { row-gap: 1.5rem; }
+  .case-process { row-gap: 1.3rem; }
+  .case-print { width: 62%; justify-self: center; }
+  .case-band { aspect-ratio: 2.9; }
+  .case-guide-scroll {
+    --guide-start: var(--guide-side);
+    --guide-cover-width: min(calc(var(--guide-layout) * 0.69), 22rem);
+  }
+
+  .case-pagination {
+    flex-wrap: nowrap;
+    gap: 0.55rem;
+    margin-block: 3rem 2.25rem;
+  }
+
+  .case-neighbor {
+    min-height: 44px;
+    padding-inline: 0.5em;
+    font-size: clamp(0.72rem, 2.9vw, 0.9rem);
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .case-guide-scroll { --guide-layout: calc(100cqw - 2.5rem); }
+}
+
+@media (max-width: 350px) {
+  .case-guide-scroll { --guide-layout: calc(100cqw - 1.75rem); }
+}
