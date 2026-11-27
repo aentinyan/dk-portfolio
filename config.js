@@ -7,7 +7,7 @@ export const config = {
     "hemilink": "/projects/hemilink/",
   },
   socialUrls: {
-    behance: "https://behance.net",
-    pinterest: "https://pin.it",
+    behance: "https://www.behance.net/adeuseph",
+    pinterest: "https://pin.it/ll6JBqBmr",
   },
 };
